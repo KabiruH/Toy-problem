@@ -1,18 +1,20 @@
 {
-  "name": "java-code",
+  "name": "code-challenge",
   "version": "1.0.0",
-  "description": "the first code challenge",
-  "main": "income.js",
+  "description": "first code challenge",
+  "main": "(speedTest.js) (studentMarks.js)",
   "scripts": {
-    "test": "npm start"
+    "test":  "node index.js", "npm start"
+              
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/KabiruH/Toy-problem.git"
+    "url": "git+https://github.com/KabiruH/Toy-problem.git"
   },
   "keywords": [
     "code",
-    "challenge"
+    "challenge",
+    "javaScript"
   ],
   "author": "Kabiru",
   "license": "ISC",

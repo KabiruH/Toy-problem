@@ -1,7 +1,7 @@
 
 document.getElementById("clickForMarks").onclick = function(){
+    //to activate the click option on the browser. The output is in the browser console
     var marks = document.getElementById("studentMarks").value
-    
     
     if (marks > 79 && marks <= 100){
         console.log ('A')
@@ -18,10 +18,8 @@ document.getElementById("clickForMarks").onclick = function(){
     if (marks < 40){
         console.log ('E')
     }
-    else 
-        console.log ('invalid')
-}
-
+   }
+// each of the if statements represents a range of grades
 
 
 
