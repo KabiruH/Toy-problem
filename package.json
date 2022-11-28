@@ -1,0 +1,23 @@
+{
+  "name": "java-code",
+  "version": "1.0.0",
+  "description": "the first code challenge",
+  "main": "income.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KabiruH/Toy-problem.git"
+  },
+  "keywords": [
+    "code",
+    "challenge"
+  ],
+  "author": "Kabiru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KabiruH/Toy-problem/issues"
+  },
+  "homepage": "https://github.com/KabiruH/Toy-problem#readme"
+}
