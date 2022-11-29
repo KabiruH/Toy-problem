@@ -77,8 +77,7 @@ function getNSSF (){
 function getPAYE (taxDue){
     
     taxDue = income - (NHIF + NSSF)
-        console.log ('your taxDue', taxDue)
-   
+           
         if (taxDue <= 24000){
         PAYE = taxDue * 0.1
     }
