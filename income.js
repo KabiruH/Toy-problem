@@ -1,77 +1,82 @@
 document.getElementById("netSalary").onclick = function(){
 //to activate the click option on the browser. The output is in the browser console
 
-function netSalaryCalculator (gross, NSSF, NHIF, PAYE){
-    let gross = salary 
+let income = parseInt(document.getElementById("netSalaryCalculator").value)
+function netSalaryCalculator (){
+let NHIF = 0
+let NSSF = 0
+let PAYE = 0
+let net = 0
 
+  
+  function getNHIF (NHIF){  
     
-    if(gross<6000){
+    if(income<6000){
         NHIF = 150;
     }
-    if(gross>=6000 && gross<8000){
+    if(income>=6000 && income<8000){
         NHIF = 300;
     }
-    if(gross>=8000 && gross<12000){
+    if(income>=8000 && income<12000){
         NHIF = 400;
     }
-    if(gross>=12000 && gross<15000){
+    if(income>=12000 && income<15000){
         NHIF = 500;
     }
-    if(gross>=15000 && gross<20000){
+    if(income>=15000 && income<20000){
        NHIF = 600;
     }
-    if(gross>=20000 && gross<25000){
+    if(income>=20000 && income<25000){
        NHIF = 750;
     }
-    if(gross>=25000 && gross<30000){
+    if(income>=25000 && income<30000){
        NHIF = 850;
     }
-    if(gross>=30000 && gross<35000){
+    if(income>=30000 && income<35000){
        NHIF = 900;
     }
-    if(gross>=35000 && gross<40000){
+    if(income>=35000 && income<40000){
         NHIF = 950;
     }
-    if(gross>=40000 && gross<45000){
+    if(income>=40000 && income<45000){
         NHIF = 1000;
     }
-    if(gross>=45000 && gross<50000){
+    if(income>=45000 && income<50000){
         NHIF = 1100;
     }
-    if(gross>=50000 && gross<60000){
+    if(income>=50000 && income<60000){
         NHIF = 1200;
     }
-    if(gross>=60000 && gross<70000){
+    if(income>=60000 && income<70000){
         NHIF = 1300
     }
-    if(gross>=70000 && gross<80000){
+    if(income>=70000 && income<80000){
         NHIF = 1400
     }
-    if(gross>=80000 && gross<90000){
+    if(income>=80000 && income<90000){
         NHIF = 1500
     }
-    if(gross>=90000 && gross<100000){
+    if(income>=90000 && income<=100000){
         NHIF = 1600
     }
-    else {
+    if (income > 100000) {
         NHIF = 1700
     }
    console.log("Your NHIF is", NHIF) 
 }
 // the NHIF calculations first
 
-function NSSF (pensionablePay){
-        pensionablePay = 0.06 * gross
-        if (pensionablePay >= 2160){
-            console.log (2160)
-        }
-        else {
-        console.log (pensionablePay)}  
-}
-
+function getNSSF (){
+    NSSF = (0.06 * income) 
+    Math.max(NSSF || 18000)
+          console.log ("your NSSF is", NSSF)}  
+     
+     
 // the NSSF payments follow
-function PAYE (taxDue){
-    taxDue = gross - (NHIF-NSSF)
+
+function getPAYE (taxDue){
+    
+    taxDue = income - (NHIF + NSSF)
         console.log ('your taxDue', taxDue)
    
         if (taxDue <= 24000){
@@ -83,18 +88,24 @@ function PAYE (taxDue){
     if (taxDue > 32333){
         PAYE = taxDue * 0.3
     }
-    console.log (taxDue)
+    console.log ("your PAYE is", PAYE)
+}
     
+    getNHIF()
+    getNSSF()
+    getPAYE()
+    net = income - (NSSF + NHIF + PAYE)
+    console.log ('your net is', net)
     //this is to compute the tax
 
-    computeNHIF()
-    computeNSSF()
-    computePAYE()
-    netSalaryCalculator = gross - (NSSF + NHIF + PAYE)
-    console.log ('your net is', netSalaryCalculator)
+    
+    
+}
+netSalaryCalculator()
+
 
     //this gives a summary of the computations plus
- }
+ 
 }
 
 

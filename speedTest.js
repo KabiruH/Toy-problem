@@ -4,10 +4,10 @@ document.getElementById("speedTest").onclick = function(){
    
   const speed = document.getElementById("speedDetector").value
     
-  const points = ((speed - 70)/5)
+  const points = Math.floor((speed - 70)/5)
 // we define points with the formula above
-    if (speed < 70){
-       conslole.log ('ok')
+    if (speed <= 70){
+       console.log ('ok')
     }
 // less than 70 should print ok
     
